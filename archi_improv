@@ -1,0 +1,34 @@
+# Stage 5
+
+# Architecture Improvements
+
+## Problems
+
+- Sequential processing
+- Slow notification delivery
+- No retry mechanism
+- No fault tolerance
+
+## Improved Design
+
+1. API receives notification request.
+2. Store notification in database.
+3. Publish message to a queue.
+4. Worker services consume messages.
+5. Deliver notifications.
+6. Retry failed deliveries.
+7. Move permanently failed jobs to Dead Letter Queue.
+
+## Technologies
+
+- RabbitMQ
+- Redis
+- Worker Services
+- WebSockets
+
+## Benefits
+
+- Faster processing
+- Better scalability
+- Fault tolerance
+- Reliable delivery
